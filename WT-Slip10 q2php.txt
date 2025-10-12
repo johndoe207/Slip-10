@@ -1,0 +1,29 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$num1 = (int)$_POST['num1'];
+$num2 = (int)$_POST['num2'];
+function findMod($a, $b) {
+return $a % $b;
+}
+function findPower($a, $b) {return pow($a, $b);
+}
+function sumOfFirstNNumbers($n) {
+return ($n * ($n + 1)) / 2;
+}
+function factorial($n) {
+if ($n < 0) return "Undefined";
+return ($n == 0) ? 1 : $n * factorial($n - 1);
+}
+$mod = findMod($num1, $num2);
+$power = findPower($num1, $num2);
+$sum = sumOfFirstNNumbers($num1);
+$factorial = factorial($num2);
+echo "<h1>Results</h1>";
+echo "<p>Mod of $num1 and $num2: <strong>$mod</strong></p>";
+echo "<p>$num1 raised to the power of $num2: <strong>$power</strong></p>";
+echo "<p>Sum of first $num1 numbers: <strong>$sum</strong></p>";
+echo "<p>Factorial of $num2: <strong>$factorial</strong></p>";
+} else {
+echo "<p>No data received.</p>";
+}
+?>
