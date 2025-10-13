@@ -1,5 +1,0 @@
-import pandas as pd
-df = pd.read_csv('winequality-red.csv')
-basic_stats = df.describe()
-print("Basic Statistical Details:")
-print(basic_stats)
