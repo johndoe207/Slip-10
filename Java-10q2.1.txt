@@ -1,0 +1,19 @@
+package student;
+public class StudentInfo{
+private int rollNo;
+private String name;
+private String studentClass;
+private double percentage;
+public StudentInfo(int rollNo,String name,String studentClass,double percentage){
+this.rollNo=rollNo;
+this.name=name;
+this.studentClass=studentClass;
+this.percentage=percentage;
+}
+public void displayInfo(){
+System.out.println("Student Roll No: "+rollNo);
+System.out.println("Student Name: "+name);
+System.out.println("Class: "+studentClass);
+System.out.println("Percentage: "+percentage+"%");
+}
+}

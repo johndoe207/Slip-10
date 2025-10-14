@@ -1,0 +1,10 @@
+package student;
+public class StudentPer{
+public double calculatePercentage(int[] marks){
+int totalMarks=0;
+for(int mark:marks){
+totalMarks+=mark;
+}
+return (totalMarks/(double)(marks.length*100))*100;
+}
+}
