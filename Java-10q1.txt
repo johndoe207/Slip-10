@@ -1,0 +1,11 @@
+interface CubeCalculator{
+int calculate(int x);
+}
+public class CubeOfNumber{
+public static void main(String[] args){
+CubeCalculator cube=(int x)->x*x*x;
+int number=5;
+int result=cube.calculate(number);
+System.out.println("The cube of "+number+" is: "+result);
+}
+}
