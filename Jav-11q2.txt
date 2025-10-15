@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class InvalidPasswordException extends Exception {
+    public InvalidPasswordException(String message) {
+        super(message);
+    }
+}
+
+public class LoginCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter username: ");
+            String username = scanner.nextLine();
+
+            System.out.print("Enter password: ");
+            String password = scanner.nextLine();
+
+            if (!username.equals(password)) {
+                throw new InvalidPasswordException("Invalid Password: Password must match the username.");
+            }
+
+            System.out.println("Login successful!");
+        } catch (InvalidPasswordException e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            scanner.close();
+        }
+    }
+}
